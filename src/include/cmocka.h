@@ -16,6 +16,10 @@
 #ifndef CMOCKA_H_
 #define CMOCKA_H_
 
+#include <stdarg.h>
+#include <stddef.h>
+#include <setjmp.h>
+
 #ifdef _WIN32
 #if _MSC_VER < 1500
 #ifdef __cplusplus
@@ -27,18 +31,6 @@ int __stdcall IsDebuggerPresent();
 #endif   /* __cplusplus */
 #endif  /* _MSC_VER < 1500 */
 #endif  /* _WIN32 */
-
-/*
- * These headers or their equivalents should be included prior to including
- * this header file.
- *
- * #include <stdarg.h>
- * #include <stddef.h>
- * #include <setjmp.h>
- *
- * This allows test applications to use custom definitions of C standard
- * library functions and types.
- */
 
 /* For those who are used to __func__ from gcc. */
 #ifndef __func__
